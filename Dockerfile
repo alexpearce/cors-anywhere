@@ -8,4 +8,6 @@ COPY . .
 
 EXPOSE 8080
 
+# Pick up the CERN CA bundle
+ENV NODE_EXTRA_CA_CERTS /usr/src/app/CERN_Grid_Certification_Authority.ca-bundle
 CMD [ "node", "server.js" ]
